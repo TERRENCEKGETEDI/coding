@@ -1,6 +1,15 @@
 from flask import Flask, render_template, request, redirect, url_for
 from werkzeug.security import generate_password_hash, check_password_hash
 
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+    return 'Hello, Flask!'
+
+
 app = Flask(__name__)
 
 # In-memory database for demonstration (replace with a database in a real-world application)
